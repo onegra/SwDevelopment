@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>input 연습</h1>
+    <hr>
+
+    <ul>
+        <li>input 태그는 대부분 form태그 내부에 배치하여 사용한다</li>
+        <li>input 태그는 사용자 입력 편의성을 위해 tpye을 변경할 수 있다</li>
+        <li>type을 지정하지 않으면 기본은 type="text"이다</li> 
+        <li>form 태그의 action속성은 입력값을 보낼 서버의 경로이다</li>
+        <li>submit을 클릭하면 form내부의 모든 inout을 제출(전송)한다</li>
+    </ul>
+
+    <form action="https://search.naver.com/search.naver">
+        <p><input type="text" name="query"></p>
+        <p>
+            <label><input type="radio" name="where" value="image">이미지</label>
+            <label><input type="radio" name="where" value="news">뉴스</label>
+            <label><input type="radio" name="where" value="kin">지식in</label>
+        </p>
+        <p><input type="submit" value="검색"></p>
+    </form>
+</body>
+</html>

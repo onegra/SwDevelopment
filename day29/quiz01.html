@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body > div {
+            /*border: 1px dashed red;*/
+            width: 900px;
+            margin: auto;
+            padding: 10px;
+        }
+        /*body > div > div {
+            border: 1px dashed green;
+        } */
+        div.top {
+            display: flex;
+            justify-content: space-between;
+        }
+        div.left {
+            text-align: left;
+            color: green;
+            font-size: 15px;
+        }
+        div.right {
+            font-size: 15px;
+            text-align: right;
+            background-color: white;
+        }
+        div.top > div.right > ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        div.top > div.right > ul li{
+            margin: 0 5px; 
+        }
+        div.mid {
+            text-align: center;
+        }
+        div.bottom {
+            border: 1px solid #ccc;
+        }
+        div.bottom > ul {
+            display: flex;
+            padding-left: 0;
+            overflow: hidden;
+        }
+        div.bottom > ul > li {
+            background-color: rgb(245, 244, 244);
+            margin-right: 25px;
+        }
+        ul > li:hover {
+            cursor: pointer; /*마우스 올리면 모양을 손가락 모양으로 바꾼다*/
+        }
+    </style>
+
+</head>
+<body>
+    <div class="top">
+        <div class="left">NAVER
+        </div>
+        <div class="right">
+            <ul>
+                <li>카페홈</li>
+                <li>이웃</li>
+                <li>가입카페
+                    <select style="border: 9;">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </li>
+                <li>새글</li>
+                <li>내소식</li>
+                <li>채팅</li>
+                <li>로그인</li>
+            </ul>
+        </div>
+    </div>
+    <div class="mid"><img src="../day26/짱구/짱아.png"></div>
+    <div class="bottom">
+        <ul>
+            <li>전체글보기</li>
+            <li>인기글</li>
+            <li>이미지모아보기</li>
+            <li>카페태그보기</li>
+            <li>초캠 명예의 전당</li>
+        </ul>
+    </div>
+</body>
+</html>
