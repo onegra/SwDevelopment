@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.root {
+            width: 700px;
+            margin: auto;
+        }
+        p.target {
+            display: none;
+        }
+        div.root > p:first-child:hover + p.target{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>display: none</h1>
+    <hr>
+    <h3>모습이 보이지 않는다 화면상의 자리 차지도 없어진다</h3>
+    <div class="root">
+        <button>버튼</button>
+        <p class="target">
+            Lorem ipsum dolor sit, amet con sectetur adipisicing elit. At velit doloremque, vero optio labore enim quidem fugit omnis, aperiam necessitatibus pariatur fugiat beatae, unde vel debitis accusantium iste consectetur sed?
+        </p>
+        <img src="danbi.jpg" width="100">
+    </div>
+</body>
+</html>
