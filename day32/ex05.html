@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.overlay{
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            background-color: rgba(0, 0, 0, 0.5);
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+        div.content{
+            transition-duration: 1s;
+            position: fixed;
+            top: 100%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 10px 10px 10px black;
+            z-index: 2;
+            padding: 10px;
+        }
+        div.button {
+            position: relative;
+            width: 70px;
+            border: 1px solid red;
+            background-color: white;
+            z-index: 3;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+            margin: 10px;
+        }
+        div.button:hover {
+            background-color: red;
+            color: white;
+        }
+        div.modal {
+           /*display: none;*/
+           opacity: 0;
+           transition-duration: 1s;
+           z-index: -1;
+        }
+        
+        div.button:hover + div.modal > div.content {
+            top: 50%;
+            transition-duration: 1s;
+        }
+        div.button:hover + div.modal {
+            /*display: block;*/
+            opacity: 1;
+            transition-duration: 1s;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+    <h1>css 모달</h1>
+    <hr>
+    <div id="root">
+        <div class="button">버튼</div>
+        <div class="modal">
+            <div class="overlay"></div>
+            <div class="content">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, iusto possimus sapiente perspiciatis ea eligendi dolorem autem eum quaerat magni? Est deserunt, recusandae architecto earum voluptatem odio dolor culpa totam!</p>
+            </div>
+        </div>
+
+        <div class="button">버튼2</div>
+        <div class="modal">
+            <div class="overlay"></div>
+            <div class="content">
+            <p align="center">
+                <img src="danbi.jpg" width="200">
+            </p>
+            <p align="center">파란색은 싫어 핑크색이 좋단말이야</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
