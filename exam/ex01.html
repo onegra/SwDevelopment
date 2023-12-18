@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header {border: 1px dashed red;}
+        nav {border: 1px dashed orangered;}
+        section {border: 1px dashed orange;}
+        article {border: 1px dashed green;}
+        main {border: 1px dashed skyblue;}
+        footer {border: 1px dashed blue;}
+        aside {border: 1px dashed violet;}
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            width: 100%;
+            border-bottom: 1px solid grey ;
+            position: fixed; /*고정: 단 스크롤애 영향을 받지 않음*/
+            top: 0;
+            background-color: white;
+            z-index: 5;
+        }
+        header + main {
+            margin-top: 62px;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        ul, ol {
+            list-style: none;
+            padding-left: 0;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            margin-bottom: 0;
+        }
+        .inner {
+            margin: 0 auto;
+            padding: 0 57px;
+            max-width: 1194px;
+            border-left: 2px dashed green;
+            border-right: 2px dashed green;
+        }
+        .logo {
+            background-image: url('https://www.chol.com/common/img/main/logo.png');
+            background-repeat: no-repeat;
+            background-position: center ;
+            width: 157px;
+            height: 60px;
+        }
+        .flex {
+            display: flex;
+        }
+        .sb {
+            display: flex;
+            justify-content: space-between;
+        }
+        nav {
+            align-items: center;
+            width: 900px;
+        }
+        nav > ul {
+            display: flex;
+        }
+        nav > ul > li {
+            font-size: 18px;
+            font-weight: bold;
+            width: 60px;
+            text-align: center;
+        }
+        nav > ul:nth-child(2) > li {
+            font-size: 16px;
+            font-weight: 100;
+        }
+        nav + div {
+            display: flex;
+            align-items: center;
+        }
+        .textcolor1 {
+            color: #0499E2;
+        }
+        .textcolor2 {
+            color: #007aff;
+        }
+        .title {
+            align-items: center;
+        }
+        div.news + div > div.item {
+            background-color: skyblue;
+            width: 200px;
+            margin: 10px 0;
+            padding: 10px;
+            height: 150px;
+        }
+        .rel {
+            position: relative;
+        }
+        .left-arrow {
+            left: -40px;
+        }
+        .right-arrow {
+            right: -40px;
+        }
+        .left-arrow,
+        .right-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+            background-color: #dadada !important;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            width: 30px !important;
+            height: 30px !important;
+            border-radius: 50%;
+        }
+        section.login {
+            display: flex;
+            align-items: center;
+            padding: 20px 57px;
+        }
+        span.hello {
+            font-size: 30px;
+            font-weight: bold;
+            margin-right: 5px;
+        }
+        section.login > button{
+            all: unset;
+            width: fit-content;
+            border: 1px solid #dadada;
+            border-radius: 35px;
+            padding: 20px;
+            margin: 5px;
+            font-size: 18px;
+         }
+         section.login > button.login {
+            background: linear-gradient(-45deg, #34bbf0,#0699e2 50%);
+            color: white;
+            font-weight: bold;
+         }
+         section.rec {
+            height: 450px;
+            background-color: aliceblue;
+
+         }
+         .rec.sb {
+            height: 400px;
+         }
+         .rec.sb > div {
+            width: 49%;
+            background-color: lightpink;
+            height: 100%;
+         }
+         
+         .sub-list {
+            /*flex wrap에서 요소가 2줄 이상 나타난다면 align-content로 여러 줄의 간격을 정렬*/
+            display: flex;
+            flex-flow: wrap;
+         }
+         div.sub-video {
+            background-color: lightgreen;
+            width: 285px;
+            height: 190px;
+            box-sizing: border-box;
+         }
+         div.sub-video:nth-child(2n + 1) {
+            margin-right: 15px;
+         }
+         div.sub-video:first-child, div.sub-video:nth-child(2) {
+            margin-bottom: 18px;
+         }
+         video {
+            width: 100%;
+            height: 100%;
+         }
+
+    </style>
+</head>
+<body>
+    <header class="">
+        <div class="inner flex">
+        <div class="logo"></div>
+            <nav class="sb">
+                <ul>
+                    <li class="textcolor1"><a href="">메일</a></li>
+                    <li class="textcolor2"><a href="">뉴스</a></li>
+                    <li><a href="">게임</a></li>
+                    <li><a href="">운세</a></li>
+                    <li><a href="">인물</a></li>
+                </ul>
+                <ul>
+                    <li class="textcolor1"><a href="">주소록</a></li>
+                    <li class="textcolor1"><a href="">FAX</a></li>
+                    <li class="textcolor1"><a href="">SMS</a></li>
+                </ul>
+                <div><a href="">서비스 전체보기<span class="hbg"></span></a></div>
+
+            </nav>
+        </div>
+    
+    </header>
+    <main>
+        <section class="login inner">
+            <span class="hello textcolor1">안녕하세요.</span>
+            <button class="login">로그인</button>
+            <button>회원가입</button>
+
+        </section>
+
+        <section class="inner">
+            <div class="news sb">
+                <div class="title">
+                    뉴스
+                    <a href=""><button>전체 </button></a>
+                </div>
+                <div>더보기</div>
+            </div>
+            <div class="sb rel">
+                <div class="item">
+                    <div class="news-image"></div>
+                    <div class="news-title"></div>
+                    <div class="news-press"></div>
+                </div>
+                <div class="item">
+                    <div class="news-image"></div>
+                    <div class="news-title"></div>
+                    <div class="news-press"></div>
+                </div>
+                <div class="item">
+                    <div class="news-image"></div>
+                    <div class="news-title"></div>
+                    <div class="news-press"></div>
+                </div>
+                <div class="item">
+                    <div class="news-image"></div>
+                    <div class="news-title"></div>
+                    <div class="news-press"></div>
+                </div>
+                <div class="item">
+                    <div class="news-image"></div>
+                    <div class="news-title"></div>
+                    <div class="news-press"></div>
+                </div>
+                <div class="left-arrow">&lt;</div>
+                <div class="right-arrow">&gt;</div>
+            </div>
+        </section>
+        <section class="rec">
+            <div class="inner">
+
+                <h2>당신을 위한 추천 영상</h2>
+
+                <div class="sb rel">
+                    <div class="main-video">
+                        <video src="test.mp4"
+                            muted="muted"
+                            autoplay="autoplay"
+                            controls="controls"></video>
+                    </div>
+                    <div class="sub-list">
+                        <div class="sub-video">사이드1</div>
+                        <div class="sub-video">사이드2</div>
+                        <div class="sub-video">사이드3</div>
+                        <div class="sub-video">사이드4</div>
+                    </div>
+                </div>
+
+                <div class="left-arrow">&lt;</div>
+                <div class="right-arrow">&gt;</div>
+            </div>
+            
+        </section>
+        
+    </main>
+    <footer class="inner">
+        <div>
+            <ul class="flex" style="margin: 0 auto; width: 60%;">
+                <li><a href="">회사소개</a></li>
+                <li><a href="">제휴문의</a></li>
+                <li><a href="">개인정보처리방침</a></li>
+                <li><a href="">청소년보호정책</a></li>
+                <li><a href="">이용약관</a></li>
+                <li><a href="">고객센터</a></li>
+            </ul>
+        </div>
+        <p align="center">
+            copyright
+        </p>
+    </footer>
+</body>
+</html>
